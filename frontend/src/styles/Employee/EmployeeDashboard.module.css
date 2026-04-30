@@ -1,0 +1,231 @@
+.employeeDashboard {
+    height: 100vh;
+    background-color: #dfdfdf;
+    display: flex;
+    font-family: Arial, sans-serif;
+}
+
+.dashboardContent {
+    margin-top: 20px;
+    flex: 1;
+    padding: 20px;
+    margin-left: 250px; /* Adjust based on Sidebar width */
+}
+
+.gridLayout {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.welcomeWrapper{
+    margin-bottom: 10px;
+    font-size: 25px;
+}
+
+.metricsContainer {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.metricsContainer:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.metricCard {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.cardContent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.metricNumber {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.metricLabel {
+    font-size: 1rem;
+    color: #666;
+}
+
+.Chart {
+    grid-column: span 3; /* Maintain original column span */
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.pieWrapper {
+    width: 100%; /* Responsive width */
+    margin: 30px auto;
+    max-width: 400px;
+}
+
+.payslipAvailable {
+    background-color: #baf7c8; /* Green for available */
+    color: white;
+}
+
+.payslipNotAvailable {
+    background-color: #fcbdc3; /* Red for not available */
+    color: white;
+}
+
+.payslipAvailable:hover {
+    background-color: #8fffa7;
+}
+
+.payslipNotAvailable:hover {
+    background-color: #ff8491;
+}
+
+
+.payslipHistorySection {
+    grid-column: span 3;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.historyHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.filters {
+    display: flex;
+    gap: 15px;
+}
+
+.filterSelect {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    outline: none;
+    cursor: pointer;
+}
+
+.filterSelect:focus {
+    border-color: #007bff;
+}
+
+.payslipTableWrapper {
+    overflow-x: auto;
+}
+
+.payslipTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.payslipTable th,
+.payslipTable td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #eee;
+    text-align: left;
+}
+
+.payslipTable th {
+    background-color: #f8f9fa;
+    font-weight: 600;
+    color: #333;
+}
+
+.payslipTable tr:hover {
+    background-color: #fcfcfc;
+}
+
+.downloadButton {
+    padding: 6px 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.2s;
+}
+
+.downloadButton:hover {
+    background-color: #0056b3;
+}
+
+.disabledButton {
+    padding: 6px 12px;
+    background-color: #cccccc;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: not-allowed;
+    font-size: 14px;
+}
+
+.noData {
+    text-align: center;
+    padding: 30px;
+    color: #666;
+    font-size: 16px;
+    background-color: #f8f9fa;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+
+.loadingSpinner {
+    text-align: center;
+    padding: 20px;
+    font-size: 18px;
+    color: #666;
+}
+
+@media (max-width: 768px) {
+    .dashboardContent {
+        margin-left: 0; /* Remove margin for mobile */
+        padding: 15px;
+    }
+
+    .gridLayout {
+        grid-template-columns: 1fr; /* Single-column layout */
+    }
+
+    .metricsContainer{
+        grid-column: span 1; /* Stack items vertically */
+    }
+
+    .metricIcon {
+        width: 50px;
+        margin-right: 10px;
+    }
+
+    .metricNumber {
+        font-size: 1.5rem;
+    }
+
+    .metricLabel {
+        font-size: 0.875rem;
+    }
+}

@@ -1,0 +1,182 @@
+/* src/styles/AdminDashboard.module.css */
+
+.adminDashboard {
+    background-color: #dfdfdf;
+    display: flex;
+    font-family: Arial, sans-serif;
+}
+
+.dashboardContent {
+    margin-top: 20px;
+    flex: 1;
+    padding: 20px;
+    margin-left: 250px; /* Matches the sidebar width */
+}
+
+/* Original 8-column grid layout */
+.gridLayout {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr); /* Retain the 8-column structure */
+    gap: 20px;
+}
+
+.metricsContainer {
+    grid-column: span 2; /* Preserve original 2-column span */
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.metricsContainer:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.metricCard {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    background: #ffffff;
+    border-radius: 8px;
+}
+
+.cardContent {
+    display: flex;
+    align-items: center;
+}
+
+.metricIcon {
+    width: 60px;
+    height: auto;
+    margin-right: 20px;
+}
+
+.metricNumber {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.metricLabel {
+    font-size: 1rem;
+    color: #888;
+}
+
+/* Department payroll chart */
+.deptPayrollChart {
+    grid-column: span 3; /* Maintain original column span */
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.doughnutWrapper {
+    width: 100%; /* Responsive width */
+    margin: 30px auto;
+    max-width: 400px;
+}
+
+.payrollChart {
+    grid-column: span 5; /* Maintain original span */
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.employeeGrowthChart {
+    grid-column: span 5; /* Maintain original span */
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.highestSalarySection {
+    grid-column: span 3; /* Maintain original span */
+    padding: 20px;
+    background: #FFF;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.highestSalarySection h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.highestSalarySection ul {
+    list-style: none;
+    padding: 0;
+}
+
+.highestSalarySection li {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+    padding: 5px 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.highestSalarySection li:last-child {
+    border-bottom: none;
+}
+
+/* Media query adjustments for tablet and mobile */
+@media (max-width: 1200px) {
+    .gridLayout {
+        grid-template-columns: repeat(4, 1fr); /* Change to 4-column layout */
+    }
+
+    .metricsContainer {
+        grid-column: span 4; /* Take full width */
+    }
+
+    .deptPayrollChart,
+    .payrollChart,
+    .employeeGrowthChart,
+    .highestSalarySection {
+        grid-column: span 4; /* Take full width */
+    }
+}
+
+@media (max-width: 768px) {
+    .dashboardContent {
+        margin-left: 0; /* Remove margin for mobile */
+        padding: 15px;
+    }
+
+    .gridLayout {
+        grid-template-columns: 1fr; /* Single-column layout */
+    }
+
+    .metricsContainer,
+    .deptPayrollChart,
+    .payrollChart,
+    .employeeGrowthChart,
+    .highestSalarySection {
+        grid-column: span 1; /* Stack items vertically */
+    }
+
+    .metricIcon {
+        width: 50px;
+        margin-right: 10px;
+    }
+
+    .metricNumber {
+        font-size: 1.5rem;
+    }
+
+    .metricLabel {
+        font-size: 0.875rem;
+    }
+}

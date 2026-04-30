@@ -1,0 +1,86 @@
+/* src/components/Sidebar.module.css */
+/* src/styles/Sidebar.module.css */
+
+.sidebar {
+    width: 250px;
+    background-color: #222;
+    color: #ECF0F1;
+    padding: 20px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    transition: transform 0.3s ease-in-out;
+}
+
+.sidebar.active {
+    transform: translateX(0); /* Show when active */
+}
+
+.sidebar h2 {
+    font-size: 28px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+.sidebar nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar nav ul li {
+    margin-bottom: 20px;
+}
+
+.navLinks {
+    padding: 1rem;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.sidebar nav ul li a {
+    color: #ECF0F1;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.navLinks:hover {
+    background-color: #3b3e41;
+    transform: scale(1.05);
+}
+
+/* Highlight the active link */
+.active {
+    background-color: #3b3e41;
+    transform: scale(1.05);
+    color: #FFF; /* Optional: Change text color for active links */
+}
+
+/* Mobile-specific adjustments */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: fixed;
+        transform: translateX(-100%); /* Initially hidden */
+    }
+
+    .sidebar.active {
+        transform: translateX(0); /* Slide in */
+    }
+
+    .toggleButton {
+        background-color: #222;
+        color: #ECF0F1;
+        border: none;
+        font-size: 24px;
+        padding: 10px;
+        cursor: pointer;
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        z-index: 1100;
+    }
+}

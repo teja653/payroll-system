@@ -1,0 +1,57 @@
+/* Main container for Leaves List with sidebar */
+.Leavescontainer {
+    display: flex;
+    background-color: #dfdfdf;
+    min-height: 100vh;
+}
+
+/* Leaves List content area to avoid sidebar overlap */
+.leavesList {
+    margin: 20px;
+    flex: 1;
+    padding: 20px;
+    margin-left: 250px;
+    background-color: #dfdfdf;
+    font-family: Arial, sans-serif;
+    color: #000;
+}
+
+
+
+/* Table styling */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* Table header row */
+.table th {
+    background-color: #222;
+    border: 1px solid #ddd;
+    color: #fff;
+    font-weight: bold;
+    padding: 12px 15px;
+    text-align: left;
+    font-size: 18px;
+}
+
+/* Table body rows */
+.table td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+}
+
+.table tr {
+    background-color: #fff;
+}
+
+.table tr:hover {
+    background-color: #f5f5f5;
+    transition: background-color 0.2s;
+}
+
+

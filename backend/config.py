@@ -1,0 +1,1 @@
+SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://root:pass123@localhost/payroll_management'
